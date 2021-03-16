@@ -1,6 +1,12 @@
 # RAID3
 Temat: Tablice dysków nadmiarowych RAID3
 
+Autorzy:
+<ul>
+	<li>Kamil Bojęś,</li>
+	<li>Mikołaj Szklarz.</li>
+</ul>
+
 Główne założenia:
 <ul>
 	<li>Program powinien prezentować w formie graficznej działanie układu/aglorytmu,</li>
