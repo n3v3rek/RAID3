@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="informationPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white" xmlns="http://javafx.com/javafx/1.8.0_251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.GUI.FXMLControllers.informationStageController">
+    <center>
+        <Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-image: url(tlo.jpg)" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="exitButton" layoutX="715.0" layoutY="525.0" mnemonicParsing="false" onAction="#Exit" prefHeight="50.0" prefWidth="160.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Exit" />
+                <Button fx:id="informationButton" layoutX="515.0" layoutY="525.0" mnemonicParsing="false" onAction="#GoToStart" prefHeight="50.0" prefWidth="160.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Menu" />
+            <Pane layoutX="370.0" layoutY="30.0" prefHeight="65.0" prefWidth="160.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 5px">
+               <children>
+                      <Label layoutX="30.0" layoutY="10.0" prefHeight="45.0" prefWidth="105.0" style="-fx-alignment: center; -fx-font-weight: bold; -fx-font-size: 25px;" text="RAID3" />
+               </children>
+            </Pane>
+            <Pane layoutX="520.0" layoutY="190.0" prefHeight="260.0" prefWidth="360.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 5px">
+               <children>
+                      <ImageView fx:id="imageViewController" fitHeight="201.0" fitWidth="337.0" layoutX="50.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="50.0" layoutY="120.0" prefHeight="450.0" prefWidth="410.0" style="-fx-border-color: black; -fx-background-color: white; -fx-border-width: 5px">
+               <children>
+                  <ImageView fitHeight="410.0" fitWidth="370.0" layoutX="35.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" fx:id="descriptionController"/>
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
