@@ -2,37 +2,37 @@ package Java.Model;
 
 public class SetOfDisks {
 
-    private String DiskOne;
-    private String DiskTwo;
-    private String ControlDisk;
+    private String DiscOne;
+    private String DiscTwo;
+    private String ControlDisc;
 
-    public SetOfDisks(String diskOne, String diskTwo, String controlDisk) {
-        DiskOne = diskOne;
-        DiskTwo = diskTwo;
-        ControlDisk = controlDisk;
+    public SetOfDisks(String discOne, String discTwo, String controlDisc) {
+        this.DiscOne = discOne;
+        this.DiscTwo = discTwo;
+        this.ControlDisc = controlDisc;
     }
 
-    public String getDiskOne() {
-        return DiskOne;
+    public String getDiscOne() {
+        return this.DiscOne;
     }
 
-    public void setDiskOne(String diskOne) {
-        DiskOne = diskOne;
+    public void setDiscOne(String discOne) {
+        this.DiscOne = discOne;
     }
 
-    public String getDiskTwo() {
-        return DiskTwo;
+    public String getDiscTwo() {
+        return this.DiscTwo;
     }
 
-    public void setDiskTwo(String diskTwo) {
-        DiskTwo = diskTwo;
+    public void setDiscTwo(String discTwo) {
+        this.DiscTwo = discTwo;
     }
 
-    public String getControlDisk() {
-        return ControlDisk;
+    public String getControlDisc() {
+        return this.ControlDisc;
     }
 
-    public void setControlDisk(String controlDisk) {
-        ControlDisk = controlDisk;
+    public void setControlDisc(String controlDisc) {
+        this.ControlDisc = controlDisc;
     }
 }
