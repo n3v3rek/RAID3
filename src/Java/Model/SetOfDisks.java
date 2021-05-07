@@ -32,7 +32,8 @@ public class SetOfDisks {
         return this.ControlDisc;
     }
 
-    public void setControlDisc(String controlDisc) {
-        this.ControlDisc = controlDisc;
+    public void createControlDisc(){
+        //TODO
+        //Tworzenie dysku parzystości na podstawie pozostałych dwóch
     }
 }
