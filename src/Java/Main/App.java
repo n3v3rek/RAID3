@@ -21,17 +21,17 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    public static void setFirstDisc(String disc){
-        setOfDisks.setDiscOne(disc);
-    }
+    public static void setFirstDisc(String disc){ setOfDisks.setDiscOne(disc); }
 
     public static void setSecondDisc(String disc){
         setOfDisks.setDiscTwo(disc);
     }
 
-    public static void setControlDisc(String disc){
-        setOfDisks.setControlDisc(disc);
+
+    public static void createControlDisc(String disc){
+        setOfDisks.createControlDisc();
     }
+
 
     public static String getFirstDisc(){
         if (setOfDisks != null) {
