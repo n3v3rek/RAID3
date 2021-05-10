@@ -4,17 +4,20 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FilesReader {
 
     public static boolean checkFile(String path) {
-        return Files.exists(Paths.get(path));
+        Path filePath = Paths.get("src\\Resources\\" +path);
+        return Files.exists(filePath);
     }
 
-    public static String readFile(String path) throws IOException {
+    public static String readFileLane(String path) throws IOException {
         try {
-            BufferedReader bufferedReader = Files.newBufferedReader(Paths.get(path));
+            Path filePath = Paths.get("src\\Resources\\" + path);
+            BufferedReader bufferedReader = Files.newBufferedReader(filePath);
             return bufferedReader.readLine();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -24,7 +27,4 @@ public class FilesReader {
             throw new IOException("Wystapil jakis blad - zwiazany z z operacjami I/O");
         }
     }
-
-    //TODO
-    //Metoda zapisująca stringa w pliku -> zapis dysku parzystości
 }
