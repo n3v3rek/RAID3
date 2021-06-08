@@ -11,11 +11,6 @@ import java.util.stream.Collectors;
 
 public class FilesReader {
 
-    public static boolean checkFile(String path) {
-        Path filePath = Paths.get("src\\Resources\\" +path);
-        return Files.exists(filePath);
-    }
-
     public static ArrayList<String> readFile(String path)
         throws IOException{
         try {
@@ -32,22 +27,6 @@ public class FilesReader {
             throw new IOException("Wystapil jakis blad - zwiazany z z operacjami I/O");
         }
 
-    }
-    public static String readFileLane(String path)
-            throws IOException {
-        try {
-            Path filePath = Paths.get("src\\Resources\\" + path);
-            BufferedReader bufferedReader = Files.newBufferedReader(filePath);
-            String fileLine = bufferedReader.readLine();
-            bufferedReader.close();
-            return fileLine;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            throw new FileNotFoundException("Nie znaleziono pliku o ścieżce: " + path);
-        } catch (IOException e){
-            e.printStackTrace();
-            throw new IOException("Wystapil jakis blad - zwiazany z z operacjami I/O");
-        }
     }
 
     public static void createReport(String path, SetOfDisks setOfDisks, String status)
