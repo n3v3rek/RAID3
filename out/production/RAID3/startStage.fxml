@@ -10,7 +10,7 @@
          <children>
             <Pane layoutX="360.0" layoutY="220.0" prefHeight="270.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: white; ">
                <children>
-                  <Button fx:id="startButton" layoutX="20.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Start" />
+                  <Button fx:id="startButton" layoutX="20.0" layoutY="25.0" mnemonicParsing="false" onAction="#Start" prefHeight="50.0" prefWidth="160.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Start" />
                   <Button fx:id="exitButton" layoutX="20.0" layoutY="194.0" mnemonicParsing="false" onAction="#Exit" prefHeight="50.0" prefWidth="160.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Exit" />
                   <Button fx:id="informationButton" layoutX="20.0" layoutY="110.0" mnemonicParsing="false" onAction="#GoToInformation" prefHeight="50.0" prefWidth="160.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Informacje" />
                </children>

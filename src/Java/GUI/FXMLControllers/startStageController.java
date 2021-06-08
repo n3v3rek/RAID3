@@ -31,7 +31,7 @@ public class startStageController implements Initializable, viewChanger {
     }
 
     public void Start() {
-
+        changePane("loadDisksStage");
     }
 
     public void GoToInformation() {
