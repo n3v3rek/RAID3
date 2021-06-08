@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="exploreDataPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white" xmlns="http://javafx.com/javafx/1.8.0_251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java.GUI.FXMLControllers.exploreDataStageController">
+    <center>
+        <Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-image: url(tlo.jpg)" BorderPane.alignment="CENTER">
+            <Pane layoutX="259.0" layoutY="7.0" prefHeight="574.0" prefWidth="199.0">
+                <TextArea fx:id="currentDiscOneTextArea" layoutX="100.0" layoutY="45.0" prefHeight="154.0" prefWidth="236.0" />
+                <TextArea fx:id="currentDiscTwoTextArea" layoutX="100.0" layoutY="239.0" prefHeight="154.0" prefWidth="236.0" />
+                <Label alignment="CENTER" layoutX="100.0" layoutY="5.0" prefHeight="25.0" prefWidth="226.0" text="Obecny dysk #1" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label alignment="CENTER" layoutX="100.0" layoutY="205.0" prefHeight="25.0" prefWidth="226.0" text="Obecny dysk #2" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+            <Button layoutX="100.0" layoutY="492.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="225.0" text="Zapis do pliku" onAction="#createReport"/>
+            <Button layoutX="100.0" layoutY="440.0" mnemonicParsing="false" onAction="#goToMenuStage" prefHeight="36.0" prefWidth="225.0" text="Główne Menu" />
+            </Pane>
+            <Pane layoutX="559.0" layoutY="7.0" prefHeight="574.0" prefWidth="320.0">
+                <TextArea fx:id="discOneTextArea" layoutX="100.0" layoutY="45.0" prefHeight="144.0" prefWidth="226.0" />
+                <TextArea fx:id="discTwoTextArea" layoutX="100.0" layoutY="239.0" prefHeight="144.0" prefWidth="226.0" />
+                <TextArea fx:id="controlDiscTextArea" layoutX="100.0" layoutY="438.0" prefHeight="144.0" prefWidth="226.0" />
+                <Label alignment="CENTER" layoutX="100.0" layoutY="5.0" prefHeight="25.0" prefWidth="226.0" text="Zapisany dysk #1" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label alignment="CENTER" layoutX="100.0" layoutY="205.0" prefHeight="25.0" prefWidth="226.0" text="Zapisany dysk #2" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label alignment="CENTER" layoutX="100.0" layoutY="398.0" prefHeight="25.0" prefWidth="226.0" text="Zapisany dysk kontrolny" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+            </Pane>
+         <Button fx:id="deleteDiscOneButton" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.0" text="Usuń dysk" onAction="#deleteDiscOne"/>
+         <Button fx:id="deleteSomeDataFromDiscOneButton" layoutX="20.0" layoutY="105.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Usuń część danych z dysku" onAction="#deleteSomeBitsFromDiscOne"/>
+         <Button fx:id="changeSomeDataFromDiscOneButton" layoutX="20.0" layoutY="155.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Zmień losowo bit na niebinarny " onAction="#changeSomeBitsFromDiscOne"/>
+         <Button fx:id="changeSomeDataFromDiscTwoButton" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Zmień losowo bit na niebinarny " onAction="#changeSomeBitsFromDiscTwo"/>
+         <Button fx:id="deleteDiscTwoButton" layoutX="20.0" layoutY="246.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.0" text="Usuń dysk" onAction="#deleteDiscTwo"/>
+         <Button fx:id="deleteSomeDataFromDiscTwoButton" layoutX="20.0" layoutY="300.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Usuń część danych z dysku" onAction="#deleteSomeBitsFromDiscTwo"/>
+         <Button fx:id="recoverDiscOneButton" layoutX="20.0" layoutY="445.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Przywróć - Dysk#1" onAction="#recoverDiscOne" />
+         <Button fx:id="editDiscOneButton" layoutX="180.0" layoutY="50.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.0" text="Edytuj dysk" onAction="#editDiscOne"/>
+         <Button fx:id="recoverDiscTwoButton" layoutX="20.0" layoutY="495.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Przywróć - Dysk#2" onAction="#recoverDiscTwo" />
+         <Label alignment="CENTER" layoutX="20.0" layoutY="10.0" prefHeight="36.0" prefWidth="300.0" text="Operacje na dysku #1" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="20.0" layoutY="200.0" prefHeight="36.0" prefWidth="300.0" text="Operacje na dysku #2" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="20.0" layoutY="400.0" prefHeight="36.0" prefWidth="300.0" text="Operacje przywracania dysków" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Button layoutX="20.0" layoutY="550.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="300.0" text="Reset" onAction="#resetCurrentDisks" />
+         <Button layoutX="358.0" layoutY="550.0" mnemonicParsing="false" onAction="#exitFromApp" prefHeight="36.0" prefWidth="225.0" text="Exit" />
+         <Label alignment="CENTER" layoutX="350.0" layoutY="400.0" prefHeight="36.0" prefWidth="225.0" text="Menu" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <Button fx:id="editDiscTwoButton" layoutX="180.0" layoutY="246.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.0" text="Edytuj dysk" onAction="#editDiscTwo" />
+        </Pane>
+    </center>
+</BorderPane>
