@@ -1,11 +1,14 @@
 package Java.Main;
 
+import Java.FileOperations.FilesReader;
 import Java.Model.SetOfDisks;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class App extends Application {
 
@@ -21,36 +24,57 @@ public class App extends Application {
         primaryStage.show();
     }
 
-    public static void setFirstDisc(String disc){ setOfDisks.setDiscOne(disc); }
+    public static void setFirstDisc(ArrayList<String> disc){
+        if (setOfDisks == null){
+            setOfDisks = new SetOfDisks();
+        }
+            setOfDisks.setDiscOne(disc); }
 
-    public static void setSecondDisc(String disc){
+    public static void setSecondDisc(ArrayList<String> disc){
+        if (setOfDisks == null){
+            setOfDisks = new SetOfDisks();
+        }
         setOfDisks.setDiscTwo(disc);
     }
 
-
-    public static void createControlDisc(String disc){
+    public static void createControlDisc(){
         setOfDisks.createControlDisc();
     }
 
-
-    public static String getFirstDisc(){
-        if (setOfDisks != null) {
+    public static ArrayList<String> getFirstDisc(){
            return setOfDisks.getDiscOne();
-        }
-        return "Error in disc one - no disc";
     }
 
-    public static String getSecondDisc(){
-        if (setOfDisks != null) {
+    public static ArrayList<String> getSecondDisc(){
             return setOfDisks.getDiscTwo();
-        }
-        return "Error in disc two - no disc";
     }
 
-    public static String getControlDisc(){
-        if (setOfDisks != null) {
+    public static ArrayList<String> getControlDisc(){
             return setOfDisks.getControlDisc();
+    }
+
+    public static void clearDataFromDisks(){
+        setOfDisks = null;
+    }
+
+    public static void recoverDiscOne(){
+        ArrayList<String> discTwo = setOfDisks.getDiscTwo();
+        ArrayList<String> recoveredDisc = setOfDisks.recoverFromControlDiscAnd(discTwo);
+        setOfDisks.setDiscOne(recoveredDisc);
+    }
+
+    public static void recoverDiscTwo(){
+        ArrayList<String> discOne = setOfDisks.getDiscOne();
+        ArrayList<String> recoveredDisc = setOfDisks.recoverFromControlDiscAnd(discOne);
+        setOfDisks.setDiscTwo(recoveredDisc);
+    }
+
+    public static void createReport(String status){
+        try {
+            FilesReader.createReport("report.txt",setOfDisks,status);
+        } catch (Exception exception){
+            exception.printStackTrace();
         }
-        return "Error in control disc - no disc";
+
     }
 }
