@@ -26,7 +26,6 @@ public class FilesReader {
             e.printStackTrace();
             throw new IOException("Wystapil jakis blad - zwiazany z z operacjami I/O");
         }
-
     }
 
     public static void createReport(String path, SetOfDisks setOfDisks, String status)

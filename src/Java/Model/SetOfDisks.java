@@ -16,12 +16,6 @@ public class SetOfDisks {
         ControlDisc = new ArrayList<>();
     }
 
-    public SetOfDisks(ArrayList<String> discOne, ArrayList<String> discTwo, ArrayList<String> controlDisc) {
-        this.DiscOne = discOne;
-        this.DiscTwo = discTwo;
-        this.ControlDisc = controlDisc;
-    }
-
     public ArrayList<String> getDiscOne() {
         return this.DiscOne;
     }
@@ -85,46 +79,6 @@ public class SetOfDisks {
         return true;
     }
 
-    public void disableDiscOne(){
-        DiscOne = null;
-    }
-
-    public void disableDiscTwo(){
-        DiscTwo = null;
-    }
-
-    public void printDiscOne(){
-        System.out.println("DiscOne:");
-        printDisc(DiscOne);
-    }
-
-    public void printDiscTwo(){
-        System.out.println("DiscTwo:");
-        printDisc(DiscTwo);
-    }
-
-    public void printControlDisc(){
-        System.out.println("ControlDisc:");
-        printDisc(ControlDisc);
-    }
-
-    private void printDisc(ArrayList<String> disc){
-        for (int i=0;i<disc.size();i++)
-            System.out.println(disc.get(i));
-    }
-
-    public void recoverDisks(){
-        if (ControlDisc == null){
-            System.out.println("No control disc to recover from.");
-        } else if (DiscTwo == null && DiscOne == null){
-            System.out.println("Disc cannot be recovered when both disks are damaged.");
-        } else if (DiscOne == null){
-            DiscOne = recoverFromControlDiscAnd(DiscTwo);
-        } else if (DiscTwo == null){
-            DiscTwo = recoverFromControlDiscAnd(DiscOne);
-        }
-    }
-
     public ArrayList<String> recoverFromControlDiscAnd(ArrayList<String> disc){
 
         ArrayList<String> tempArrayList = new ArrayList<>();
@@ -174,8 +128,8 @@ public class SetOfDisks {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (int i=0;i<arrayListToBeConverted.size();i++)
-            stringBuilder.append(arrayListToBeConverted.get(i));
+        for (String s : arrayListToBeConverted)
+            stringBuilder.append(s);
         return stringBuilder.toString();
     }
 }
